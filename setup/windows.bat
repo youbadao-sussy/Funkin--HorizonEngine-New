@@ -11,6 +11,7 @@ haxelib install flixel-addons 4.0.1
 haxelib install flixel-tools 1.5.1
 haxelib install flixel-animate 1.4.0
 haxelib install hscript-iris 1.1.3
+haxelib install hscript 2.7.0
 haxelib install haxeui-core 1.7.0
 haxelib install haxeui-flixel 1.7.0
 haxelib install tjson 1.4.0
