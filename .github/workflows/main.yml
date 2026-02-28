@@ -36,5 +36,5 @@ jobs:
         uses: actions/upload-artifact@v4.3.4
         with:
           name: Funkin' HorizonEngine-Windows
-          path: export/release/windows/bin
+          path: export/windows/bin
           retention-days: 3
