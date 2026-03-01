@@ -181,7 +181,7 @@ class Character extends Bopper
 			finishAnim();
 		}
 		
-		if (isPlayer && getAnimName().startsWith('sing'))
+		if (getAnimName().startsWith('sing'))
 		{
 			holdTimer += elapsed;
 		}
@@ -206,6 +206,10 @@ class Character extends Bopper
 			*/
 		
 		super.update(elapsed);
+	}
+	override function draw()
+	{
+		super.draw();
 	}
     
 	override function dance(forced:Bool = false)

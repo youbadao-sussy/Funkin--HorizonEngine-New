@@ -82,7 +82,7 @@ class PlayState extends FlxState
 		plyGroup.x = PLY_X;
 		plyGroup.y = PLY_Y;
 		
-		player = new Character('bf');
+		player = new Character('bf', true);
 		startCharacterPos(player);
 		plyGroup.add(player);
 		plyMap.set(player.curCharacter, player);
