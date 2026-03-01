@@ -62,9 +62,9 @@ class PlayState extends FlxState
 		super.create();
 		FunkinAssets.cache.clearStoredMemory();
 		
-		camGame = new FlxCamera();
-		camHUD = new FlxCamera();
-		camOther = new FlxCamera();
+		camGame = new FlxCameraEx();
+		camHUD = new FlxCameraEx();
+		camOther = new FlxCameraEx();
 		
 		camHUD.bgColor = 0x0;
 		camOther.bgColor = 0x0;
@@ -72,7 +72,7 @@ class PlayState extends FlxState
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
-    	FlxG.cameras.setDefaultDrawTarget(camGame, true);
+		// FlxG.cameras.setDefaultDrawTarget(camGame, true);
 
 		var text = new FlxText(0, 0, 0, "Hello World", 64);
 		text.screenCenter();

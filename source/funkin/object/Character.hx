@@ -43,6 +43,11 @@ class Character extends Bopper
 	public var skipDance:Bool = false;
 
 	public var healthIcon:IconData;
+
+	/**
+	 * Last hit row index
+	 */
+	public var mostRecentRow:Int = 0; // for ghost anims n shit
     
 	public var imageFile:String = '';
     public var imageType:String = '';
