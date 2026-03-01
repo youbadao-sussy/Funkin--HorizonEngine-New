@@ -12,9 +12,17 @@ class PlayState extends FlxState
 	public var camGame:FlxCamera;
 	public var camHUD:FlxCamera;
 	public var camOther:FlxCamera;
+	public var cameraSpeed:Float = 1;
 	
 	public var defaultCamZoom:Float = 1.05;
 	public var defaultHudZoom:Float = 1;
+
+	/**
+	 * Disables automatic camera movements if enabled.
+	 */
+	public var isCameraOnForcedPos:Bool = false;
+
+	public var cameraLerping:Bool = true;
 
 	public var oppMap:Map<String, Character> = new Map();
 	public var centerMap:Map<String, Character> = new Map();
@@ -56,6 +64,11 @@ class PlayState extends FlxState
 	 * Target the game camera follows
 	 */
 	var camFollow:FlxObject;
+
+	/**
+	 * Previous cameras target. used in story mode for a more seamless transition
+	 */
+	static var prevCamFollow:Null<FlxObject> = null;
 
 	override public function create()
 	{
