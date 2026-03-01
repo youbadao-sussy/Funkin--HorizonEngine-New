@@ -18,6 +18,11 @@ class Character extends Bopper
     
 	public var curCharacter:String = DEFAULT_CHARACTER;
 
+	/**
+	 * is the player character
+	 */
+	public var isPlayer:Bool = false;
+
     public var charName:String = '';
 	
 	public var holdTimer:Float = 0;
@@ -58,11 +63,12 @@ class Character extends Bopper
 	public var vSliceSustains = false;
 	public var doubleGhost = false;
     
-	public function new(x:Float = 0, y:Float = 0, character:String = 'bf')
+	public function new(x:Float = 0, y:Float = 0, character:String = 'bf', playable:Bool = false)
 	{
 		super(x, y);
 		
 		this.curCharacter = character;
+		this.isPlayer = playable;
 		
 		initCharacter(CharacterParser.charInfo(curCharacter));
 	}
@@ -175,14 +181,15 @@ class Character extends Bopper
 			finishAnim();
 		}
 		
-		if (getAnimName().startsWith('sing'))
+		if (isPlayer && getAnimName().startsWith('sing'))
 		{
 			holdTimer += elapsed;
 		}
-		//else if (isPlayer) holdTimer = 0;
+		else if (isPlayer)
+			holdTimer = 0;
 		
 		//if (!isPlayer && holdTimer >= Conductor.stepCrotchet * 0.0011 * singDuration)
-		if (holdTimer >= ((60 / 150) * 1000) / 4 * 0.0011 * singDuration)
+		if (!isPlayer && holdTimer >= ((60 / 150) * 1000) / 4 * 0.0011 * singDuration)
 		{
 			dance(forceDance);
 			holdTimer = 0;
