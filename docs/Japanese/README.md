@@ -1,6 +1,7 @@
 # Friday Night Funkin': Horizon Engine
 
 
+======================
 ## 変更点、追加点一覧
 [ゲームプレイ]
 
