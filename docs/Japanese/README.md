@@ -1,6 +1,8 @@
 # Friday Night Funkin': Horizon Engine
 
-## 機能一覧
+## 変更点、追加機能一覧
+### ゲームプレイ
+
 ### Mod制作者用
 [Chart Editor]
 
