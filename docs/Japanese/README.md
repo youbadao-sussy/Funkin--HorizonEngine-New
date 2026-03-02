@@ -1,8 +1,8 @@
 # Friday Night Funkin': Horizon Engine
 
+
 ## 変更点、追加点一覧
-詳しくは[こちら]をご覧ください
-### ゲームプレイ
+[ゲームプレイ]
 
 ## エディター一覧
 [Chart Editor]
@@ -16,6 +16,11 @@
 [Results Editor (計画段階。)]
 
 [Note Skin Editor (計画段階。)]
+
+## Mod制作者用
+### スクリプト
+[Lua]
+[Hscript]
 
 ## 貢献者
 ### Horizon Engine
