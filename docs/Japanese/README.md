@@ -1,5 +1,13 @@
 # Friday Night Funkin': Horizon Engine
 
+## 機能一覧
+### Mod制作者用
+[Chart Editor]
+[Level Editor (Week Editorと同じ。)]
+[Freeplay Editor (計画段階。)]
+[Freeplay Playable Editor (計画段階。)]
+[Results Editor (計画段階。)]
+
 ## 貢献者
 ### Horizon Engine
 Youbadao - Coder
