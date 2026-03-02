@@ -1,9 +1,10 @@
 # Friday Night Funkin': Horizon Engine
 
-## 変更点、追加機能一覧
+## 変更点、追加点一覧
+詳しくは[こちら]をご覧ください
 ### ゲームプレイ
 
-### Mod制作者用
+## エディター一覧
 [Chart Editor]
 
 [Level Editor (Week Editorと同じ。)]
