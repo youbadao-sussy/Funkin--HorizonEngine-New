@@ -10,7 +10,7 @@ hscriptとは、haxeに似た記述形式で、後述の拡張子を使ったス
 
 というものがあります。
 
-hscriptを追加するライブラリは、`hscript`, `Sscript(使えないライブラリ)`, `hscript-iris`があり、
+hscriptを追加するライブラリは、`hscript`, `Sscript(現在は使えないライブラリ)`, `hscript-iris`があり、
 このエンジンでは`hscript-iris`を使用しています。
 
 ## 拡張子
