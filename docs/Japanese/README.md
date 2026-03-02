@@ -12,6 +12,8 @@
 
 [Results Editor (計画段階。)]
 
+[Note Skin Editor (計画段階。)]
+
 ## 貢献者
 ### Horizon Engine
 Youbadao - Coder
