@@ -22,23 +22,28 @@
     "animations": [
         {
             "animName": "idle",
-            "prefix": "BF idle dance0"
+            "prefix": "BF idle dance0",
+            "frameRate": 24
         },
         {
             "animName": "singLeft",
-            "prefix": "BF NOTE LEFT0"
+            "prefix": "BF NOTE LEFT0",
+            "frameRate": 24
         },
         {
             "animName": "singDown",
-            "prefix": "BF NOTE DOWN0"
+            "prefix": "BF NOTE DOWN0",
+            "frameRate": 24
         },
         {
             "animName": "singUp",
-            "prefix": "BF NOTE UP0"
+            "prefix": "BF NOTE UP0",
+            "frameRate": 24
         },
         {
             "animName": "singRight",
-            "prefix": "BF NOTE RIGHT0"
+            "prefix": "BF NOTE RIGHT0",
+            "frameRate": 24
         }
     ]
 }

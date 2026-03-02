@@ -127,16 +127,16 @@ class Character extends Bopper
 				
 				if (animIndices.length > 0)
 				{
-					if (anim.frameRate == null)
-						addAnimByIndices(animName, animPrefix, animIndices, 24, animLoop, flipX, flipY);
-					else
+					// if (anim.frameRate == null)
+					//	addAnimByIndices(animName, animPrefix, animIndices, 24, animLoop, flipX, flipY);
+					// else
 						addAnimByIndices(animName, animPrefix, animIndices, animFps, animLoop, flipX, flipY);
 				}
 				else
 				{
-					if (anim.frameRate == null)
-						addAnimByPrefix(animName, animPrefix, 24, animLoop, flipX, flipY);
-					else
+					// if (anim.frameRate == null)
+					//	addAnimByPrefix(animName, animPrefix, 24, animLoop, flipX, flipY);
+					// else
 						addAnimByPrefix(animName, animPrefix, animFps, animLoop, flipX, flipY);
 				}
 				
