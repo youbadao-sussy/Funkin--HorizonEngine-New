@@ -14,7 +14,7 @@ Luaは、1993年にブラジルで開発された、軽量･高速･C++やHaxe
 ## 拡張子
 * `.lua`
 * `.luas`
-* `.lscript`
+* `.luascript`
 
 ## 書き方
 ```lua
