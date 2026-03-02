@@ -24,7 +24,7 @@
 
 ## 貢献者
 ### Horizon Engine
-Youbadao - Coder
+Youbadao - コーダー
 
 ### スペシャルサンクス!!
 * Psych Engine (Shadow Mario) - コード一部流用や譜面の変換機能の参考, 譜面変換･出力機能。
