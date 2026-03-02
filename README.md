@@ -1,6 +1,6 @@
 ![Actions](https://github.com/youbadao-sussy/Funkin--HorizonEngine-New/actions/workflows/main.yml/badge.svg)
 
-ja-JP
+[Japanese](docs/README/ja-JP.md)
 
 # Friday Night Funkin': Horizon Engine
 
