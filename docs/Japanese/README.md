@@ -9,17 +9,17 @@ _________________________
 [ゲームプレイ](/docs/Japanese/Gameplay/Head.md)
 
 ## エディター一覧
-[Chart Editor]
+[Chart Editor](/docs/Japanese/Editor/Charting.md)
 
-[Level Editor (Week Editorと同じ。)]
+[Level Editor (Week Editorと同じ。)](/docs/Japanese/Editor/Charting.md)
 
-[Freeplay Editor (計画段階。)]
+[Freeplay Editor (計画段階。)](/docs/Japanese/Editor/Charting.md)
 
-[Freeplay Playable Editor (計画段階。)]
+[Freeplay Playable Editor (計画段階。)](/docs/Japanese/Editor/Charting.md)
 
-[Results Editor (計画段階。)]
+[Results Editor (計画段階。)](/docs/Japanese/Editor/Charting.md)
 
-[Note Skin Editor (計画段階。)]
+[Note Skin Editor (計画段階。)](/docs/Japanese/Editor/Charting.md)
 
 ## Mod制作者用
 ### スクリプト
