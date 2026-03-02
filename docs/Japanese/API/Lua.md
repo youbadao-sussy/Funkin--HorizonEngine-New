@@ -11,5 +11,9 @@ Luaは、1993年にブラジルで開発された、軽量･高速･C++やHaxe
 
 ## 書き方
 ```lua
-tableName = []
+local tableName = []
+
+function onCreate() {
+  -- コードの記述
+}
 ```
