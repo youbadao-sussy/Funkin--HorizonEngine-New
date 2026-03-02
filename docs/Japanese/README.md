@@ -23,8 +23,8 @@ _________________________
 
 ## Mod制作者用
 ### スクリプト
-[Lua] | 
-[Hscript]
+[Lua](/docs/Japanese/API/Lua.md) | 
+[Hscript](/docs/Japanese/API/Hscript.md)
 
 ____
 ____
