@@ -1,6 +1,7 @@
 package funkin.backend.states;
 
 import flixel.FlxState;
+import flixel.group.FlxGroup.FlxTypedGroup;
 
 class MusicBeatState extends FlxState
 {
@@ -29,6 +30,9 @@ class MusicBeatState extends FlxState
 		final oldStep:Int = curStep;
 
         super.update(elapsed);
+
+		updateCurStep();
+		updateBeat();
 
 		if (oldStep != curStep)
 		{
