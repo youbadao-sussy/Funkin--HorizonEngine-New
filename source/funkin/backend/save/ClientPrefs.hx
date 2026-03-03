@@ -17,6 +17,10 @@ class ClientPrefs
 	public static var controllerMode:Bool = false;
     public static var inDevMode:Bool = true;
 
+	public static var safeFrames:Int = 10;
+
+	public static var noteOffset:Int = 0;
+
 
     
 	@saveVar(false, false) public static var keyBinds:Map<String, Array<FlxKey>> = [

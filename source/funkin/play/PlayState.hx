@@ -1,13 +1,12 @@
 package funkin.play;
 
 import flixel.FlxObject;
-import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.input.keyboard.FlxKey;
 import openfl.events.KeyboardEvent;
 
-class PlayState extends FlxState
+class PlayState extends MusicBeatState
 {
 	public var camGame:FlxCamera;
 	public var camHUD:FlxCamera;
@@ -131,8 +130,6 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		
-		player?.onBeatHit(2);
 
 		if (FlxG.keys.justPressed.LEFT)
 			noteHit('singLeft');
@@ -144,6 +141,11 @@ class PlayState extends FlxState
 			noteHit('singRight');
 		if (FlxG.keys.justPressed.ENTER)
 			noteHit('hey');
+	}
+	override public function beatHit()
+	{
+		super.beatHit();
+		player?.onBeatHit(2);
 	}
 	
 	function noteHit(anim:String):Void

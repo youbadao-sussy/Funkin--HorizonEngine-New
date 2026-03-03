@@ -14,6 +14,7 @@ import flixel.util.FlxTimer;
 import funkin.Paths;
 import funkin.backend.PlayerSettings;
 import funkin.backend.save.ClientPrefs;
+import funkin.backend.states.MusicBeatState;
 import funkin.data.Controls;
 import funkin.object.Character;
 import funkin.util.CameraUtil;
