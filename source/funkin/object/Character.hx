@@ -63,10 +63,15 @@ class Character extends Bopper
     public var positionOffset:Array<Float> = [0, 0];
     public var cameraOffset:Array<Float> = [0, 0];
 
-    public var idleLength:Int = 2;
+	public var idleBeatDuration:Int = 2;
 
 	public var vSliceSustains = false;
-	public var doubleGhost = false;
+	public var ghostsEnabled = false;
+
+	// ____________________________ Ghost _____________________________
+	public var doubleGhosts:Array<FlxSprite> = [];
+	public var ghostTweenGrp:Array<FlxTween> = [];
+	public var ghostAlpha:Float = 0.6;
     
 	public function new(x:Float = 0, y:Float = 0, character:String = 'bf', playable:Bool = false)
 	{
@@ -75,7 +80,20 @@ class Character extends Bopper
 		this.curCharacter = character;
 		this.isPlayer = playable;
 		
+		ghostsInit();
+		
 		initCharacter(CharacterParser.charInfo(curCharacter));
+	}
+	function ghostsInit()
+	{
+		for (i in 0...4)
+		{
+			final ghost = new FlxSprite();
+			ghost.visible = false;
+			ghost.antialiasing = true;
+			ghost.alpha = ghostAlpha;
+			doubleGhosts.push(ghost);
+		}
 	}
 
     public function initCharacter(json:CharacterMetadata)
@@ -92,7 +110,7 @@ class Character extends Bopper
 
         this.singDuration = json.singDuration;
         this.vSliceSustains = json.sustainStopAnim;
-        this.doubleGhost = json.ghostEffect;
+		this.ghostsEnabled = json.ghostEffect;
         this.noAntialiasing = json.isPixel;
 
 		this.flipX = json.flipX;
@@ -102,7 +120,7 @@ class Character extends Bopper
 
 		this.antialiasing = !noAntialiasing && ClientPrefs.globalAntialiasing;
 
-        this.idleLength = json.idleBeat ?? 2;
+		this.idleBeatDuration = json.idleBeat ?? 2;
 
 		loadAtlas(imageFile);
 
@@ -116,7 +134,7 @@ class Character extends Bopper
 		{
 			for (anim in animations) // anim内の関数がanimationsに入っている場合?ってこと?
 			{
-				final animName:String = '' + anim.animName;
+				final animName:String = '' + anim.name;
 				final animPrefix:String = '' + anim.prefix;
 				final animFps:Int = anim.frameRate;
 				final animLoop:Bool = !!anim.looped; // Bruh
@@ -140,9 +158,9 @@ class Character extends Bopper
 						addAnimByPrefix(animName, animPrefix, animFps, animLoop, flipX, flipY);
 				}
 				
-				if (anim.offsets != null && anim.offsets.length > 1)
+				if (anim.offsets != null && anim.offsets.length > 0)
 				{
-					addOffset(anim.animName, anim.offsets[0], anim.offsets[1]);
+					addOffset(anim.name, anim.offsets[0], anim.offsets[1]);
 				}
 			}
 		}

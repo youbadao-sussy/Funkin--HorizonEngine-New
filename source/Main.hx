@@ -7,6 +7,7 @@ import openfl.Lib;
 import openfl.display.Sprite;
 import openfl.display.StageScaleMode;
 
+@:nullSafety(Strict)
 class Main extends Sprite
 {
 	public static final game =

@@ -21,27 +21,27 @@
     },
     "animations": [
         {
-            "animName": "idle",
+            "name": "idle",
             "prefix": "BF idle dance0",
             "frameRate": 24
         },
         {
-            "animName": "singLeft",
+            "name": "singLeft",
             "prefix": "BF NOTE LEFT0",
             "frameRate": 24
         },
         {
-            "animName": "singDown",
+            "name": "singDown",
             "prefix": "BF NOTE DOWN0",
             "frameRate": 24
         },
         {
-            "animName": "singUp",
+            "name": "singUp",
             "prefix": "BF NOTE UP0",
             "frameRate": 24
         },
         {
-            "animName": "singRight",
+            "name": "singRight",
             "prefix": "BF NOTE RIGHT0",
             "frameRate": 24
         }

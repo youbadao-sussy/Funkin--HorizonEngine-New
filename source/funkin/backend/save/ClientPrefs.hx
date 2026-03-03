@@ -4,15 +4,17 @@ package funkin.backend.save;
 import flixel.input.keyboard.FlxKey;
 class ClientPrefs
 {
-    public static var gpuCaching:Bool = false;
-
-    // ________________ Camera _________________
+	// _______________________ Camera ________________________
     public static var cameraMoveOnPush:Bool = false;
     
+	// _______________________ Visual ________________________
     public static var globalAntialiasing:Bool = true;
 
-    public static var controllerMode:Bool = false;
+	// ______________________ Graphics _______________________
+	public static var gpuCaching:Bool = false;
 
+	// ______________________ Gameplay _______________________
+	public static var controllerMode:Bool = false;
     public static var inDevMode:Bool = true;
 
 

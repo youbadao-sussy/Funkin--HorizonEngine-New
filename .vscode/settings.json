@@ -10,5 +10,11 @@
 			"source.sortImports": "explicit"
 		}
 	},
-	"haxe.enableExtendedIndentation": true
+	"haxe.enableExtendedIndentation": true,
+	"haxeTestExplorer.testCommand": [
+		"${haxe}",
+		"test.hxml",
+		"-lib",
+		"test-adapter"
+	]
 }

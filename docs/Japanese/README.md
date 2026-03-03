@@ -1,5 +1,7 @@
 # Friday Night Funkin': Horizon Engine
 
+![Logo](img/Horizon%20logo.png)
+
 
 _________________________
 _________________________

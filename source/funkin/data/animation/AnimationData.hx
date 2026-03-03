@@ -2,7 +2,12 @@ package funkin.data.animation;
 
 typedef AnimationData =
 {
-    var animName:String;
+	> UnnamedAnimationData,
+	var name:String;
+}
+
+typedef UnnamedAnimationData =
+{
     @:optional var assetPath:String;
     @:optional var type:String;
     var prefix:String;
