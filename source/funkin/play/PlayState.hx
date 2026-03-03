@@ -145,7 +145,7 @@ class PlayState extends MusicBeatState
 	override public function beatHit()
 	{
 		super.beatHit();
-		player?.onBeatHit(2);
+		handleBoppers(curBeat);
 	}
 	
 	function noteHit(anim:String):Void
@@ -160,6 +160,6 @@ class PlayState extends MusicBeatState
 	
 	public function handleBoppers(beat:Int)
 	{
-		// player?.onBeatHit(2);
+		player?.onBeatHit(beat);
 	}
 }
