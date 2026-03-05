@@ -5,29 +5,29 @@ import flixel.input.keyboard.FlxKey;
 class ClientPrefs
 {
 	// _______________________ Camera ________________________
-	public var cameraMoveOnPush:Bool = false;
+	public static var cameraMoveOnPush:Bool = false;
     
 	// _______________________ Visual ________________________
 	public static var globalAntialiasing:Bool = true;
 
 	// ______________________ Graphics _______________________
-	public var gpuCaching:Bool = false;
+	public static var gpuCaching:Bool = false;
 
 	// ______________________ Gameplay _______________________
-	public var controllerMode:Bool = false;
-	public var inDevMode:Bool = true;
+	public static var controllerMode:Bool = false;
+	public static var inDevMode:Bool = true;
 
 	public static var noteOffset:Int = 0;
-	public var comboOffset:Array<Int> = [0, 0, 0, 0];
-	public var ratingOffset:Int = 0;
-	public var sickWindow:Float = 45.0;
-	public var goodWindow:Float = 90.0;
-	public var badWindow:Float = 135.0;
-	public var safeFrames:Int = 10;
+	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
+	public static var ratingOffset:Int = 0;
+	public static var sickWindow:Float = 45.0;
+	public static var goodWindow:Float = 90.0;
+	public static var badWindow:Float = 135.0;
+	public static var safeFrames:Int = 10;
 
 
     
-	public var keyBinds:Map<String, Array<FlxKey>> = [
+	public static var keyBinds:Map<String, Array<FlxKey>> = [
 		// Key Bind, Name for ControlsSubState
 		'note_left' => [A, LEFT],
 		'note_down' => [S, DOWN],
