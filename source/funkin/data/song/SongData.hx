@@ -3,8 +3,9 @@ package funkin.data.song;
 typedef ChartInfo =
 {
     var scrollSpeed:Map<String, Float>;
+	var voicesPlaying:Bool;
     var events:Array<SongEventData>;
-    var notes:Map<String, Array<ChartData>>;
+	var notes:Array<ChartData>;
 }
 
 typedef SongEventData =
@@ -12,33 +13,44 @@ typedef SongEventData =
     /**
      * Time
      */
-    var T:Int;
+	var ETIME:Int;
 
     /**
      * Event Name
      */
-    var E:String;
+	var EVENT:String;
 
     /**
      * Event Value
      */
-    var V:Dynamic;
+	var VALUE:Dynamic;
 }
 
 typedef ChartData =
 {
+	var SECTION:Array<ChartNoteData>;
+	var BEAT:Float;
+}
+
+typedef ChartNoteData =
+{
     /**
      * Time
      */
-    var T:Int;
+	var TIME:Int;
 
     /**
      * Note Number
      */
-    var D:Int;
+	var ID:Int;
 
     /**
      * Note Length
      */
-    var L:Float;
+	var LENGTH:Float;
+
+	/**
+	 * Note Type
+	 */
+	var DATA:String;
 }

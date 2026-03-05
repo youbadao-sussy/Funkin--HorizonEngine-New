@@ -4,10 +4,19 @@ import funkin.data.animation.AnimationData;
 
 typedef StageMetadata =
 {
+	var directory:String;
     var name:String;
-    var cameraDefZoom:Float;
+	var cameraSpeed:Float;
     var character:BGCharacterMetadata;
-    var props:Array<StageObject>;
+	@:optional var props:Array<StageObject>;
+	@:optional var editorMeta:EditorMeta;
+}
+
+typedef EditorMeta =
+{
+	// var OPP:String;
+	// var CNT:String;
+	var PLY:String;
 }
 
 typedef BGCharacterMetadata =
@@ -18,8 +27,8 @@ typedef BGCharacterMetadata =
 typedef BGCharacterData =
 {
     var zIndex:Int;
-    var offsets:Array<Float>;
-    var cameraOffsets:Array<Float>;
+	var position:Array<Float>;
+	var cameraPos:Array<Float>;
 }
 
 typedef StageObject =
@@ -31,8 +40,9 @@ typedef StageObject =
 
     /**
      * Object Typ / オブジェクトの種類
+     * @default 'image'
      */
-    @:optional @:default('image') var assetType:String; // image, sprite, player(ply), opponent(opp), centerChar(cntr)
+	@:optional var assetType:String; // image, sprite, player(ply), opponent(opp), centerChar(cntr)
     
     /**
      * Object's Asset Path / オブジェクトのファイルパス
@@ -40,24 +50,36 @@ typedef StageObject =
     var assetPath:String;
 
     /**
-     * Object Scroll Factor / オブジェクトのスクロール変動数
+     * Object Scale / オブジェクトの大きさ
+     * @default [1.0, 1.0]
      */
-    @:optional @:default([1.0, 1.0]) var scroll:Array<Int>;
+    var scale:Array<Float>;
+
+    /**
+     * Object Scroll Factor / オブジェクトのスクロール変動数
+     * @default [1.0, 1.0]
+     */
+    @:optional var scroll:Array<Int>;
 
     /**
      * Object Position / オブジェクトの位置
      */
-    var offsets:Array<Float>;
+    var objPosition:Array<Float>;
 
     /**
      * Antialias Disabled / 画像をギザギザにするか
+     * @default false
      */
-    @:optional @:default(false) var isPixel:Bool;
+    @:optional var isPixel:Bool;
 
     /**
      * Z Index / z座標の数字
+     * @default 0
      */
-    @:optional @:default(0) var zIndex:Int;
+    @:optional var zIndex:Int;
 
-    @:optional @:default([]) var animation:Array<AnimationData>;
+    /**
+     * animation / あにめーしょん
+     */
+    @:optional var animation:Array<AnimationData>;
 }

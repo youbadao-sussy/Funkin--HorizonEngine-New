@@ -1,5 +1,6 @@
 package funkin.data.character;
 
+import flixel.animation.FlxAnimation;
 import funkin.data.animation.AnimationData;
 
 typedef CharacterMetadata =
@@ -154,6 +155,7 @@ enum abstract CharacterRenderType(String) from String to String
   public var Custom = 'custom';
 }
 
+@:nullSafety
 class CharacterParser
 {
     public static function charInfo(id:String):CharacterMetadata
@@ -191,8 +193,8 @@ class CharacterParser
         data.offsets ??= baseInfo.offsets;
         data.cameraOffsets ??= baseInfo.cameraOffsets;
         data.idleBeat ??= baseInfo.idleBeat;
-        data.idleBeat ??= baseInfo.idleBeat;
-        data.idleBeat ??= baseInfo.idleBeat;
+		data.singDuration ??= baseInfo.singDuration;
+		data.sustainStopAnim ??= baseInfo.sustainStopAnim;
         data.ghostEffect ??= baseInfo.ghostEffect;
         data.healthIcon ??= baseInfo.healthIcon;
         data.deathdata ??= baseInfo.deathData;

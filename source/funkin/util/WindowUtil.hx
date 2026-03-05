@@ -8,9 +8,6 @@ import openfl.Lib;
  */
 class WindowUtil
 {
-	public static final HORIZON_VERSION:String = '0.1.0';
-	public static final FUNKIN_VERSION:String = '0.2.7';
-
 	public static var defaultAppTitle(get, never):String;
 	
 	static function get_defaultAppTitle():String return Application.current.meta['name'];

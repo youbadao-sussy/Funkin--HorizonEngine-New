@@ -136,7 +136,7 @@ class Character extends Bopper
 			{
 				final animName:String = '' + anim.name;
 				final animPrefix:String = '' + anim.prefix;
-				final animFps:Int = anim.frameRate;
+				final animFps:Int = anim.frameRate ?? 24;
 				final animLoop:Bool = !!anim.looped; // Bruh
 				final animIndices:Array<Int> = anim.indices ?? [];
 				
@@ -145,20 +145,14 @@ class Character extends Bopper
 				
 				if (animIndices.length > 0)
 				{
-					// if (anim.frameRate == null)
-					//	addAnimByIndices(animName, animPrefix, animIndices, 24, animLoop, flipX, flipY);
-					// else
-						addAnimByIndices(animName, animPrefix, animIndices, animFps, animLoop, flipX, flipY);
+					addAnimByIndices(animName, animPrefix, animIndices, animFps, animLoop, flipX, flipY);
 				}
 				else
 				{
-					// if (anim.frameRate == null)
-					//	addAnimByPrefix(animName, animPrefix, 24, animLoop, flipX, flipY);
-					// else
-						addAnimByPrefix(animName, animPrefix, animFps, animLoop, flipX, flipY);
+					addAnimByPrefix(animName, animPrefix, animFps, animLoop, flipX, flipY);
 				}
 				
-				if (anim.offsets != null && anim.offsets.length > 0)
+				if (anim.offsets != null && anim.offsets.length > 1)
 				{
 					addOffset(anim.name, anim.offsets[0], anim.offsets[1]);
 				}
@@ -249,7 +243,7 @@ class Character extends Bopper
 		super.playAnim(animToPlay, isForced, isReversed, frame);
 		
 		if (!debugMode
-			&& ((isPlayer && flipX == originalFlipX) || (!isPlayer && flipX != originalFlipX))) // rewrite this condition later maybe
+			&& ((isPlayer && flipX != originalFlipX) || (!isPlayer && flipX == originalFlipX))) // rewrite this condition later maybe
 		{
 			var appliedOffset = offset.x;
 			
@@ -278,5 +272,21 @@ class Character extends Bopper
 	{
 		if (stunned || getAnimName().startsWith('sing')) return;
 		super.onBeatHit(beat);
+	}
+	public function getSingDisplacement():FlxPoint
+	{
+		return switch (getAnimName().substr(4).split('-')[0].toLowerCase())
+		{
+			case 'up':
+				FlxPoint.weak(0, -camDisplacement);
+			case 'down':
+				FlxPoint.weak(0, camDisplacement);
+			case 'left':
+				FlxPoint.weak(-camDisplacement, 0);
+			case 'right':
+				FlxPoint.weak(camDisplacement, 0);
+			default:
+				FlxPoint.weak();
+		}
 	}
 }
