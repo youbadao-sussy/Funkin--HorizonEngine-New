@@ -98,8 +98,10 @@ class PlayState extends MusicBeatState
 			DAD_Y = file.opponent[1];
 		 */
 
+		/*
 		if (file.cameraSpeed != null)
 			cameraSpeed = file.cameraSpeed;
+		 */
 
 		playerCameraOffset = file.character.player.cameraPos ?? [0, 0];
 
